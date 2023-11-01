@@ -93,12 +93,21 @@ function HoldBtn() {
         joueurActif = true
     }
 }
+// fonction pour le gagnant
+function Result() {
+    if (gblScore1 >= 100) {
+        alert("Le joueur 1 a gagné!")
+    } else if (gblScore2 >= 100) {
+        alert("Le joueur 2 a gagné!")
+    }
+}
 //appel de la fonction pour que ce soit au tour du Joueur 1
 TourJoueur()
 
 hold.addEventListener('click', () => {
     HoldBtn()
     TourJoueur()
+    Result()
 })
 
 lancerDé.addEventListener('click', () => {
