@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: URW Chancery L, cursive;
+    color: white;
+}
+
+body {
+    background-image: url("https://media.istockphoto.com/id/129675798/fr/vid%C3%A9o/d%C3%A9s-rouges-sur-fond-noir-accessible-en-fauteuil-roulant.jpg?s=640x640&k=20&c=IUzzSTWyttYwEjDamMhf7pjTtGxglEYFvF7Zns5GNhQ=");
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    margin: 35px 0px 15px 0px;
+}
+
+h1, h2 {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.container {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jeu-dé {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#dé {
+    font-size: 200px;
+}
+
+#lancer, #hold {
+    width: max-content;
+    height: 40px;
+    margin-top: 25px;
+    border: solid 4px white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#lancer {
+    border-radius: 15px;
+}
+
+#lancer:hover, #hold:hover {
+    color: darkred;
+    border: solid 4px darkred;
+    font-weight: bold;
+}
+
+#joueur-1, #joueur-2 {
+    width: auto;
+    height: auto;
+    border: solid 2px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
