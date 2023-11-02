@@ -2,14 +2,14 @@ let dé = document.getElementById("dé")
 let nbAleatoire = 0
 // variables joueur 1
 let joueur1 = document.getElementById("joueur-1")
-let ground1 = document.getElementById("ground-j1")
-let gndScore1 = 0
+let round1 = document.getElementById("round-j1")
+let rndScore1 = 0
 let global1 = document.getElementById("global-j1")
 let gblScore1 = 0
 // variables joueur 2
 let joueur2 = document.getElementById("joueur-2")
-let ground2 = document.getElementById("ground-j2")
-let gndScore2 = 0
+let round2 = document.getElementById("round-j2")
+let rndScore2 = 0
 let global2 = document.getElementById("global-j2")
 let gblScore2 = 0
 // variable pour le joueur actif
@@ -59,36 +59,36 @@ function TourJoueur() {
 function SwitchJoueur() {
     if (nbAleatoire === 1 && joueurActif === true) {
         joueurActif = false
-        gndScore1 = 0
-        ground1.innerHTML = gndScore1
+        rndScore1 = 0
+        round1.innerHTML = rndScore1
     } else if (nbAleatoire === 1 && joueurActif === false) {
         joueurActif = true
-        gndScore2 = 0
-        ground2.innerHTML = gndScore2
+        rndScore2 = 0
+        round2.innerHTML = rndScore2
     }
 }
 // fonction ground
-function GroundScore() {
+function RoundScore() {
     if (joueurActif === true) {
-        gndScore1 = gndScore1 + nbAleatoire
-        ground1.innerHTML = gndScore1
+        rndScore1 = rndScore1 + nbAleatoire
+        round1.innerHTML = rndScore1
     } else {
-        gndScore2 = gndScore2 + nbAleatoire
-        ground2.innerHTML = gndScore2
+        rndScore2 = rndScore2 + nbAleatoire
+        round2.innerHTML = rndScore2
     }
 }
 // fonction du bouton hold
 function HoldBtn() {
     if (joueurActif === true) {
-        gblScore1 = gblScore1 + gndScore1
-        gndScore1 = 0
-        ground1.innerHTML = gndScore1
+        gblScore1 = gblScore1 + rndScore1
+        rndScore1 = 0
+        round1.innerHTML = rndScore1
         global1.innerHTML = gblScore1
         joueurActif = false
     } else {
-        gblScore2 = gblScore2 + gndScore2
-        gndScore2 = 0
-        ground2.innerHTML = gndScore2
+        gblScore2 = gblScore2 + rndScore2
+        rndScore2 = 0
+        round2.innerHTML = rndScore2
         global2.innerHTML = gblScore2
         joueurActif = true
     }
@@ -113,7 +113,7 @@ hold.addEventListener('click', () => {
 lancerDé.addEventListener('click', () => {
     NombreAleatoire()
     CreationDé()
-    GroundScore()
+    RoundScore()
     SwitchJoueur()
     TourJoueur()
 })
