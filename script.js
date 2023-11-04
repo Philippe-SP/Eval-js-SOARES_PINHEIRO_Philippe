@@ -97,10 +97,10 @@ function HoldBtn() {
 function Result() {
     if (gblScore1 >= 100) {
         alert("Le joueur 1 a gagné!")
-        document.location.href = "Index.html"
+        document.location.href = "index.html"
     } else if (gblScore2 >= 100) {
         alert("Le joueur 2 a gagné!")
-        document.location.href = "Index.html"
+        document.location.href = "index.html"
     }
 }
 //appel de la fonction pour que ce soit au tour du Joueur 1
